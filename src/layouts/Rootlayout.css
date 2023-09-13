@@ -1,0 +1,18 @@
+.root-layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    background-color: var(--primary-color);
+    font-family: 'Lobster Two', cursive;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    margin-top: 32px;
+}

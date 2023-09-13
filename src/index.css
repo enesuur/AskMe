@@ -1,13 +1,163 @@
-body {
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  border: 0;
+  outline: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font: inherit;
+  text-decoration: none;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+hr {
+  width: 100%;
+  color: black;
+  border: 1px solid var(--primary-color);
+  
+}
+body {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+
+a, p, h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  overflow-wrap: break-word;
+}
+
+a:any-link {
+  color: white;
+}
+
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+:root {
+  --primary-color:rgb(30,48,80);
+  --secondary-color:rgb(255,213,64);
+  --box-color:rgb(255, 255, 255);
+  --background-color:rgb(241, 241, 241);
+  --font-color:rgb(28,28,28);
+}
+
+
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px; 
+}
+
+
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 20px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #ddd;
+}
+
+
+.container, .container-m {
+  width: 100%;
+  padding: 0 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
+
+@media (min-width: 480px) {
+  .container, .container-m {
+      max-width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-m {
+      max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1200px;
+  }
 }

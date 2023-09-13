@@ -1,0 +1,260 @@
+/* Profil Showcase */
+.profile-showcase {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+}
+
+/* Profil Banner */
+.profile-showcase .profile-banner {
+    width: 100%;
+    height: 256px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-showcase .profile-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Profil Avatar */
+.profile-showcase .profile-avatar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+}
+
+.profile-showcase .profile-avatar .profile-username {
+    text-align: center;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-showcase .profile-avatar .profile-username span {
+    font-size: 0.75em;
+    color: var(--font-color);
+}
+
+.profile-showcase .profile-avatar .profile-username a {
+    font-size: 0.825em;
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+.profile-showcase .profile-avatar .profile-username {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.profile-showcase .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.profile-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    border: none;
+    background-color: var(--box-color);
+    padding: 24px 32px;
+    border-radius: 0 0 8px 8px;
+    height: auto;
+}
+
+.profile-info .profile-social {
+    display: flex;
+    gap: 32px;
+}
+
+
+
+.profile-info .profile-social div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-info .profile-social div svg {
+    background-color: var(--primary-color);
+    fill: var(--secondary-color);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+}
+
+.profile-info .profile-social div span {
+    font-size: 0.75rem;
+}
+
+.profile-info .profile-social span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 1em;
+}
+
+.profile-info .profile-stats {
+    display: flex;
+    gap: 24px;
+}
+
+
+.profile-info .profile-stats div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 1em;
+    cursor: pointer;
+
+}
+
+
+.profile form {
+    max-width: 1024px;
+    margin: auto;
+    height: 108px;
+    margin-top: 32px;
+    display: block;
+    border-radius: 8px;
+}
+
+.profile form .textarea-inp {
+    position: relative;
+    height: 100%;
+    transition: height 0.3s ease;
+    max-height: 108px;
+    border-radius: 8px;
+}
+
+
+.profile form textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--primary-color);
+    font-size: 0.825em;
+    transition: background-color 0.3s ease-in-out;
+    overflow-y: auto;
+    resize: none;
+    display: block;
+    border-radius: 8px;
+}
+
+.profile form textarea:focus {
+    border: 2px solid var(--primary-color);
+}
+
+.profile form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 0.825em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.profile form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.profile form .textarea-inp span {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    color: var(--primary-color);
+    pointer-events: none;
+    font-size: 0.825em;
+    color: #0F9D58;
+}
+
+.profile form .textarea-inp button {
+    border-radius: 0;
+    height: 100%;
+    color: var(--primary-color);
+    pointer-events: none;
+    font-size: 0.825em;
+}
+
+.profile form .btn-ask {
+    margin-top: 8px;
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+}
+
+.profile-questions {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.profile-questions h2 {
+    font-size: 1.25em;
+    margin: 16px 0;
+}
+
+
+
+@media (max-width:768px) {
+    .profile-showcase .profile-avatar {
+        width: 96px;
+        height: 96px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+
+    }
+
+    .profile-info .profile-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .profile-info .profile-social {
+        margin-top: 96px;
+        gap: 48px;
+    }
+
+    .profile-info .profile-stats div {
+        font-size: 0.825rem;
+    }
+}

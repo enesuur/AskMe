@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rock+Salt&display=swap');
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 8px;
+}
+
+.home .login {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+}
+
+.home form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 8px 12px
+}
+
+
+
+.home form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+
+
+.home .login form button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.home .login form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.home .login form label .input-container {
+    position: relative;
+}
+
+.home .login form label .input-container svg {
+    position: absolute;
+    top: 50%; 
+    right: 8px;
+    transform: translateY(-50%);
+    width: 24px; 
+    height: 24px;
+    cursor: pointer;
+}
+
+.home form input {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    padding: 8px;
+    transition: border-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+  }
+  
+  .home form input:focus {
+    border-color: var(--secondary-color);
+    padding: 8px;
+  }
+
+  .home .login form .login-social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .home .login  form .login-social .login-google{
+    width: 100%;
+    background-color: #DB4437;
+  }
+  
+  .home .login  form .login-social .login-twitter{
+    width: 100%;
+    background-color: #26a7de;
+  }
+
+  .home .login  form .login-social .login-google svg,
+  .home .login  form .login-social .login-twitter svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    font-weight: 500;
+    fill: var(--box-color);
+  }
+
+
