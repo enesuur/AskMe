@@ -43,10 +43,6 @@ export default function Navbar() {
                     <SlFeed />
                 </Link>
                 </li>
-                <li><Link to={'/messages'} >
-                    <BiMessageRoundedDots />
-                </Link>
-                </li>
                 <li>
                     <Link to={'/profile'} >
                         <IoPersonOutline />

@@ -5,7 +5,7 @@ import './QuestionModal.css';
 import Avatar from '../assets/avatar.jpg';
 import Comment from '../components/Comment';
 
-export default function QuestionModal({ openQuestionModal, setOpenQuestionModal }) {
+export default function QuestionModal({ questionTitle,questionAnswer,openQuestionModal, setOpenQuestionModal }) {
   const handleModalClick = (event) => {
     setOpenQuestionModal(false);
   };
@@ -23,7 +23,7 @@ export default function QuestionModal({ openQuestionModal, setOpenQuestionModal 
               <div className='thread-question-header'>
                 <div className='thread-question-title'>
                   <b>Question</b>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>{questionTitle}</p>
                 </div>
                 <div className='thread-question-avatar'>
                   <div className='thread-avatar-info'>
@@ -51,7 +51,7 @@ export default function QuestionModal({ openQuestionModal, setOpenQuestionModal 
                 </div>
                 <p className='thread-question-answer'>
                   <b>Answer</b>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora.</p>
+                  <p>{questionAnswer}</p>
                 </p>
 
               </div>

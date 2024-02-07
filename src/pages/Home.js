@@ -1,14 +1,18 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Home.css';
-
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../context/AuthContext';
 export default function Home() {
     const [isVisible, setIsVisible] = useState(false);
     const [inputType, setInputType] = useState('password');
     const [formData, setFormData] = useState({
-        email: '',
-        password: ''
+        email: 'thorfin@ask.me.domain',
+        password: 'testpassword'
     });
 
+    const navigate = useNavigate();
+
+    const authContext = useContext(AuthContext);
     function handleFormSubmit(event) {
         event.preventDefault();
         console.log('Form Gönderildi:', formData);
@@ -21,12 +25,17 @@ export default function Home() {
             ...prev,
             [name]: value
         }));
-    }
+    };
 
     function togglePasswordVisibility() {
         setIsVisible(!isVisible);
         setInputType(isVisible ? 'password' : 'text');
-    }
+    };
+
+    function handleSigninRequest(){
+        navigate('/profile');
+        authContext.setIsAuthConfirmed(true);
+    };
 
     return (
         <section className="home container">
@@ -39,7 +48,7 @@ export default function Home() {
                     <label>
                         Email
                         <span className='input-container'>
-                            <input type='email' placeholder='Email' name='email' onChange={handleFormChange} />
+                            <input type='email' placeholder='Email' name='email' onChange={handleFormChange} value={formData.email} />
                             <svg fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" >
                                 <path d="M19.875 4.5H4.125c-1.036 0-1.875.84-1.875 1.875v11.25c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875V6.375c0-1.036-.84-1.875-1.875-1.875Z">
                                 </path>
@@ -52,7 +61,7 @@ export default function Home() {
                     <label>
                         Password
                         <span className='input-container'>
-                            <input type={inputType} placeholder='Password' name='password' onChange={handleFormChange} />
+                            <input type={inputType} placeholder='Password' name='password' onChange={handleFormChange} value={formData.password} />
                             <span className='password-toggle' onClick={togglePasswordVisibility}>
                                 {isVisible ? (
                                     <svg width="46" height="46" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"></path><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"></path><path d="m1 1 22 22"></path><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"></path></svg>
@@ -67,7 +76,7 @@ export default function Home() {
                             </span>
                         </span>
                     </label>
-                    <button >Login</button>
+                    <button onClick={handleSigninRequest}>Login</button>
                     <hr />
                     <div className='login-social'>
                         <button className='login-google'>

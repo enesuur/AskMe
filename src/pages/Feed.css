@@ -1,0 +1,21 @@
+.feed-questions {
+    margin: 36px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.feed-questions h2 {
+    font-size: 1.25em;
+    margin: 16px 0;
+    font-style: bold;
+    text-align: center;
+}
+
+.feed-questions .feed-note {
+    font-size: 1.25em;
+    font-family: monospace,serif;
+    font-style: bold;
+    text-align: center;
+}

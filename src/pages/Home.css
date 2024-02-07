@@ -80,7 +80,6 @@
     border: 2px solid var(--primary-color);
     padding: 8px;
     transition: border-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-
   }
   
   .home form input:focus {
@@ -97,10 +96,12 @@
   .home .login  form .login-social .login-google{
     width: 100%;
     background-color: #DB4437;
+    cursor: not-allowed;
   }
   
   .home .login  form .login-social .login-twitter{
     width: 100%;
+    cursor: not-allowed;
     background-color: #26a7de;
   }
 

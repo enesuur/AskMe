@@ -136,8 +136,6 @@
 .thread-question-container .thread-body div .thread-userinfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   column-gap: 12px;
 }
 
@@ -158,9 +156,9 @@
 }
 
 .thread-body .thread-question-answer {
+  margin:12px 0;
   width: 100%;
   line-height: 1.5;
-  font-size: 0.92rem;
 }
 
 .thread-question-container hr{
@@ -175,6 +173,34 @@
   flex-direction: column;
   gap: 16px;
 }
+
+
+@media screen and (max-width: 768px) {
+  .question-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .thread-question-container .thread-body {
+
+    flex-direction: column;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .question-content {
+    width: 50%; 
+  }
+
+  .thread-body div .thread-avatar {
+    width: 80px; 
+    height: 80px; 
+  }
+}
+
 
 
 
